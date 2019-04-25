@@ -4,9 +4,8 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
- *
  * In the 20×20 grid below, four numbers along a diagonal line have been marked in red.
- *
+ * <p>
  * 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
  * 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
  * 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
@@ -27,9 +26,9 @@ import java.util.ArrayList;
  * 20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16
  * 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
  * 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
- *
+ * <p>
  * The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
- *
+ * <p>
  * What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
  */
 
@@ -58,20 +57,64 @@ public class Problem11 {
             "01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48 ";
 
 
-
-
-
-
-    public static void execute(){
+    public static void execute() {
 
         String[] gridArray = gridValue.split(" ");
 
-
-        System.out.println(gridArray.length);
+        getDiagonally4MaxValueMultiply(gridArray);
     }
 
 
-    private void getUp4MaxValueMultiply() {
+    private static void getDiagonally4MaxValueMultiply(String[] gridArray) {
+
+        int maxValue = 16 * 16;
+
+
+        for (int i = 0; i < maxValue; i++) {
+
+
+//            System.out.println(i);
+
+            for (int j = 1; j <= 4; j++) {
+
+//                int nextLine = (((i * j) + 1) * 20) + (j + 1);
+//                int nextLine =  ((16 % i) + j + 1 ) * 20;
+                int nextLine = j;
+
+
+                System.out.println(nextLine);
+
+//                if (gridArray[nextLine] != null) {
+//                    System.out.println(nextLine);
+//                }
+
+
+            }
+
+        }
+
+//        for (int letfToRight = 0; letfToRight < 16; letfToRight++) {
+//
+//            int firstValue = Integer.valueOf(gridArray[letfToRight]);
+//            int secondValue = Integer.valueOf(gridArray[letfToRight]);
+//
+//        }
 
     }
 }
+
+
+//
+//
+//    for (int i = 0; i < 20; i++) {
+//
+//        int startCount = i * 20;
+//        int endCount = startCount + 20;
+//
+//        for (int j = startCount; j < endCount; j++) {
+//        System.out.print(gridArray[j]);
+//        System.out.print(" ");
+//        }
+//
+//        System.out.println("");
+//        }
